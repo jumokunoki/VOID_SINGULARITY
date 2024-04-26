@@ -140,6 +140,7 @@ protected:
 		int x, y;
 		int count, max_count;
 	};
+
 	PORTAL_MOVE port;
 	int jampcount;
 	int waitcount;

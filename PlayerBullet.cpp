@@ -760,10 +760,11 @@ void PlayerBullet::ShootProcess(int BulletType, int BWPselect, int plx, int ply,
 		p_bullet[i].hw = p_bullet[i].hx + P_BULLET_W;
 		p_bullet[i].hh = p_bullet[i].hy + P_BULLET_H;
 
-		//　円判定の位置補正
-		switch(p_bullet[i].arrow) {
+		//　円判定の位置補正（弾丸の先端にかぶるように補正）
+		switch(p_bullet[i].arrow) {// 撃った時にプレイヤーがどちらを向いているか
 		case 1: {
-			switch(p_bullet[i].aiming) {
+			// プレイヤーが右向きの場合
+			switch(p_bullet[i].aiming) {// プレイヤーの銃口の先がどこを向いているか（右・斜め上・斜め下・上・下）
 			case 0: {
 				b_hitcircle[i].x = p_bullet[i].x + 20.0f;
 				b_hitcircle[i].y = p_bullet[i].y + 7.0f;
@@ -793,7 +794,8 @@ void PlayerBullet::ShootProcess(int BulletType, int BWPselect, int plx, int ply,
 			break;
 		}
 		case -1: {
-			switch(p_bullet[i].aiming) {
+			// プレイヤーが左向きの場合
+			switch(p_bullet[i].aiming) {// プレイヤーの銃口の先がどこを向いているか（左・斜め上・斜め下・上・下）
 			case 0: {
 				b_hitcircle[i].x = p_bullet[i].x + 13.0f;
 				b_hitcircle[i].y = p_bullet[i].y + 7.0f;
@@ -823,6 +825,7 @@ void PlayerBullet::ShootProcess(int BulletType, int BWPselect, int plx, int ply,
 			break;
 		}
 		}
+		// 円判定の半径
 		b_hitcircle[i].r = 10.0f;
 
 		if(plx + 50 + SCREEN_W*2 < p_bullet[i].hx || plx - 50 - SCREEN_W * 2 > p_bullet[i].hx || ply + 50 + SCREEN_H * 2 < p_bullet[i].hy || ply - 50 - SCREEN_H * 2 > p_bullet[i].hy) {
@@ -846,22 +849,24 @@ void PlayerBullet::EffectProcess(int i) {
 int PlayerBullet::MapHitProcess(int index, int maphit, int point, int aftermovemaphit) {
 	int portal = 0;
 	if(p_bullet[index].usebullet != 0) {
+		// マップにヒットしたときの判定
 		if(maphit != 0) {
+			// ポータル設置状態を判別（なし・白黒）
 			switch(p_bullet[index].state.isPortal) {
 			case 0: {
 				_music->MakeSe(_image->Se[14]);
 				switch(p_bullet[index].state.bullettype) {
-				case 0: {
+				case 0: {// 通常弾がマップにヒットした場合
 					_effect->SetEffect(p_bullet[index].x + P_BULLET_W / 2, p_bullet[index].y + P_BULLET_H / 2, EFFECT_TYPE_NORMAL_WALL, 0, 0, 0,0, 1, EFFECT_PLAYER);
 					BulletInit(index);
 					break;
 				}
-				case 1: {
-					if(p_bullet[index].special == 0) {
+				case 1: {// 反射弾がマップにヒットした場合
+					if(p_bullet[index].special == 0) {// 既に反射していない場合
 						_effect->SetEffect(p_bullet[index].x + P_BULLET_W / 2, p_bullet[index].y + P_BULLET_H / 2, EFFECT_TYPE_RIFFLECT_WALL, 0, 0, 0,0, 1, EFFECT_PLAYER);
 						_effect->EffectCoolTime(11);
 						p_bullet[index].special++;
-						switch(p_bullet[index].arrow) {
+						switch(p_bullet[index].arrow) {// 弾が左右どちらに進んでいるか（斜め等も含む）
 						case 1: {
 							switch(p_bullet[index].aiming) {
 							case 0: {
@@ -936,18 +941,18 @@ int PlayerBullet::MapHitProcess(int index, int maphit, int point, int aftermovem
 						}
 
 					}
-					else if(p_bullet[index].special == 1) {
+					else if(p_bullet[index].special == 1) {// 既に反射している場合
 						_effect->SetEffect(p_bullet[index].x + P_BULLET_W / 2, p_bullet[index].y + P_BULLET_H / 2, EFFECT_TYPE_RIFFLECT_WALL, 0, 0, 0, 0, 1, EFFECT_PLAYER);
 						BulletInit(index);
 					}
 					break;
 				}
-				case 2: {
+				case 2: {// 貫通弾がマップにヒットした場合
 					if(p_bullet[index].special == 0) {
 						_effect->SetEffect(p_bullet[index].x + P_BULLET_W / 2, p_bullet[index].y + P_BULLET_H / 2, EFFECT_TYPE_RIFFLECT_WALL, 0, 0, 0, 0, 1, EFFECT_PLAYER);
 						p_bullet[index].x += p_bullet[index].Xspeed * 1.5;
 						p_bullet[index].y += p_bullet[index].Yspeed * 1.5;
-						if(aftermovemaphit != 0) {
+						if(aftermovemaphit != 0) {// マップチップ1マス分しか貫通できないため、もしさらに進んでも壁にヒットした場合に現在の地点をを着弾地点とする
 							BulletInit(index);
 						}
 						else {
@@ -963,7 +968,7 @@ int PlayerBullet::MapHitProcess(int index, int maphit, int point, int aftermovem
 				}
 				break;
 			}
-			case 1: {
+			case 1: {// ポータルを生成する弾の場合（ポータルの種類を着弾地点で返す以外は上記の弾挙動に準ずる）
 				switch(p_bullet[index].state.bullettype) {
 				case 0: {
 					_music->MakeSe(_image->Se[1]);
@@ -1088,6 +1093,7 @@ int PlayerBullet::MapHitProcess(int index, int maphit, int point, int aftermovem
 			}
 		}
 	}
+	// ポータルの種類を返す（0はポータルなし、定数BPORTAL_BULLET・BPORTAL_BULLETがポータルの値として返される）
 	return portal;
 }
 
