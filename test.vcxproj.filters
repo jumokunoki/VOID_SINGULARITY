@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\system">
+      <UniqueIdentifier>{53f5ebbc-d685-4767-8b9c-a2251e3f4850}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\system">
+      <UniqueIdentifier>{611ca656-20cf-42bc-a323-33642ad67b0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\scene">
+      <UniqueIdentifier>{13078307-fcfe-4be0-aa51-00a937d1eabe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\scene">
+      <UniqueIdentifier>{369b725c-2364-42f7-be1e-e6edde944344}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\mainstream">
+      <UniqueIdentifier>{1ad43fc8-cbb2-4072-9a2c-ed1db44d1263}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\mainstream">
+      <UniqueIdentifier>{7ef56e47-9c8f-42ce-a15c-3fd4e68b3917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\others">
+      <UniqueIdentifier>{eed58863-c8c2-424f-a369-78a0eb62a088}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\others">
+      <UniqueIdentifier>{23400af4-4da8-422e-be03-8de7e7b7853a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\character">
+      <UniqueIdentifier>{cbafa58f-adb3-4a13-88dd-19d5f198409d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\character">
+      <UniqueIdentifier>{3fb38a9f-7520-49f2-bdbc-8ad4d4f83452}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\character\enemy">
+      <UniqueIdentifier>{4818c3eb-75f9-4d12-8012-3edf4aed70ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\character\enemy">
+      <UniqueIdentifier>{d720aba5-c294-4dbb-a827-0e27f62dcd4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\character\object">
+      <UniqueIdentifier>{18a0ecae-69ef-4a0f-8ebd-a9afbdf590a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\character\object">
+      <UniqueIdentifier>{65a98be6-7580-4fab-839d-2be84fc92195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\scene\SceneTest">
+      <UniqueIdentifier>{bb42bd63-bded-459d-8dc1-2e99ee129d68}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameInput.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneBase.cpp">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="gamemain.cpp">
+      <Filter>ソース ファイル\mainstream</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル\mainstream</Filter>
+    </ClCompile>
+    <ClCompile Include="mymath.cpp">
+      <Filter>ソース ファイル\others</Filter>
+    </ClCompile>
+    <ClCompile Include="MapData.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="mydraw.cpp">
+      <Filter>ソース ファイル\others</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>ソース ファイル\character</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBase.cpp">
+      <Filter>ソース ファイル\character\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBullet.cpp">
+      <Filter>ソース ファイル\character\object</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerBullet.cpp">
+      <Filter>ソース ファイル\character\object</Filter>
+    </ClCompile>
+    <ClCompile Include="Option.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="Pause.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneMovie.cpp">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTitle.cpp">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Portal.cpp">
+      <Filter>ソース ファイル\character\object</Filter>
+    </ClCompile>
+    <ClCompile Include="Gimmick.cpp">
+      <Filter>ソース ファイル\character\object</Filter>
+    </ClCompile>
+    <ClCompile Include="cutin.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="effect.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="gamemainUI.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="music.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleImage.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="Playermotion.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="CharDraw.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameOver.cpp">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptText.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneGameClear.cpp">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTest.cpp">
+      <Filter>ソース ファイル\scene\SceneTest</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTestCollision.cpp">
+      <Filter>ソース ファイル\scene\SceneTest</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTestFloorProcess.cpp">
+      <Filter>ソース ファイル\scene\SceneTest</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTestStaging.cpp">
+      <Filter>ソース ファイル\scene\SceneTest</Filter>
+    </ClCompile>
+    <ClCompile Include="Fade.cpp">
+      <Filter>ソース ファイル\others</Filter>
+    </ClCompile>
+    <ClCompile Include="FadeSound.cpp">
+      <Filter>ソース ファイル\others</Filter>
+    </ClCompile>
+    <ClCompile Include="relay_point.cpp">
+      <Filter>ソース ファイル\mainstream</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyRadCalculate.cpp">
+      <Filter>ソース ファイル\character\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy_BossMotion.cpp">
+      <Filter>ソース ファイル\character\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="DataSave.cpp">
+      <Filter>ソース ファイル\system</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameInput.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneBase.h">
+      <Filter>ヘッダー ファイル\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="gamemain.h">
+      <Filter>ヘッダー ファイル\mainstream</Filter>
+    </ClInclude>
+    <ClInclude Include="mymath.h">
+      <Filter>ヘッダー ファイル\others</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTest.h">
+      <Filter>ヘッダー ファイル\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>ヘッダー ファイル\mainstream</Filter>
+    </ClInclude>
+    <ClInclude Include="MapData.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="mydraw.h">
+      <Filter>ヘッダー ファイル\others</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>ヘッダー ファイル\character</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>ヘッダー ファイル\character</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBase.h">
+      <Filter>ヘッダー ファイル\character\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBullet.h">
+      <Filter>ヘッダー ファイル\character\object</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerBullet.h">
+      <Filter>ヘッダー ファイル\character\object</Filter>
+    </ClInclude>
+    <ClInclude Include="Option.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="Pause.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneMovie.h">
+      <Filter>ヘッダー ファイル\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTitle.h">
+      <Filter>ヘッダー ファイル\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Portal.h">
+      <Filter>ヘッダー ファイル\character\object</Filter>
+    </ClInclude>
+    <ClInclude Include="MapInfo.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="Gimmick.h">
+      <Filter>ヘッダー ファイル\character\object</Filter>
+    </ClInclude>
+    <ClInclude Include="Cutin.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="effect.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="gamemainUI.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="music.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="CharDraw.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGameOver.h">
+      <Filter>ヘッダー ファイル\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptText.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGameClear.h">
+      <Filter>ヘッダー ファイル\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Fade.h">
+      <Filter>ヘッダー ファイル\others</Filter>
+    </ClInclude>
+    <ClInclude Include="FadeSound.h">
+      <Filter>ヘッダー ファイル\others</Filter>
+    </ClInclude>
+    <ClInclude Include="relay_point.h">
+      <Filter>ヘッダー ファイル\mainstream</Filter>
+    </ClInclude>
+    <ClInclude Include="DataSave.h">
+      <Filter>ヘッダー ファイル\system</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
